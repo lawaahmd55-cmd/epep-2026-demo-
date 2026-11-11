@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EPEP 2026</title>
+
+<style>
+body {
+  background: #10121b;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: orange;
+}
+
+.card {
+  background: #252b3d;
+  padding: 25px;
+  margin: 12px auto;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+button {
+  background: orange;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🔥 EPEP 2026 🔥</h1>
+
+<h2 id="heroName">PLAYER ONE</h2>
+
+<input id="nama" placeholder="Nama pemain baru">
+<button onclick="renamePlayer()">RENAME</button>
+
+<h2>SKIN KARAKTER</h2>
+<div class="card">Crimson Phantom</div>
+<div class="card">Neon Striker</div>
+<div class="card">Solar Knight</div>
+<div class="card">Shadow Pulse</div>
+
+<h2>SENJATA EVO</h2>
+<div class="card">Dragon Fury - EVO 7</div>
+<div class="card">Frostbite - EVO 6</div>
+<div class="card">Solar Flare - EVO 5</div>
+<div class="card">Void Reaper - EVO 4</div>
+
+<script>
+function renamePlayer() {
+  let nama = document.getElementById("nama").value.trim();
+
+  if (nama.length >= 2 && nama.length <= 18) {
+    document.getElementById("heroName").innerText =
+      nama.toUpperCase();
+  } else {
+    alert("Nama harus 2 sampai 18 karakter!");
+  }
+}
+</script>
+
+</body>
+</html>
